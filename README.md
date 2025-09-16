@@ -1,6 +1,21 @@
 # Video Streaming
 
+## Mike Kilmer AWS USER
+- 621014405518
+
 ## AWS
+
+### Config
+See the gitignored awsclicfg file and ensure there is a profile section in ~/.aws/config
+with those credentials:
+
+```
+[profile elliptica]
+aws_access_key_id = XXXXXX
+aws_secret_access_key = XXXXXXX
+```
+
+Use it like `aws --profile elliptica s3 ls`
 
 [good reference on yt](https://www.youtube.com/watch?v=JbVyTrfqshU)
 
@@ -45,6 +60,41 @@
 	]
 }
 ```
+
+#### VODLambdaRole Trusted Relationships needs to have two policies:
+
+```
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Allow",
+			"Sid": "",
+			"Principal": {
+				"Service": "lambda.amazonaws.com"
+			},
+			"Action": "sts:AssumeRole"
+		},
+		{
+			"Sid": "Statement1",
+			"Effect": "Allow",
+			"Principal": {
+			    "Service": "mediaconvert.amazonaws.com"
+			},
+			"Action": "sts:AssumeRole"
+		}
+	]
+}
+```
+
+### Lambda
+to get configurationId:
+`aws --profile elliptica s3api get-bucket-notification-configuration --bucket ellipticavideos`
+get bucket location:
+`aws --profile elliptica s3api get-bucket-location --bucket ellipticavideo`
+
+### Switch Regions
+[here's how](https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/copy-data-from-an-s3-bucket-to-another-account-and-region-by-using-the-aws-cli.html)
 
 #### Cloudfront
 

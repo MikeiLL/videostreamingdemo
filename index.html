@@ -6,35 +6,76 @@
   <title>video stream demo</title>
   <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
   <!-- <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script> -->
+  <style>
+    #videos {
+      display: flex;
+      flex-wrap: wrap;
+      border: 1px solid grey;
+      border-radius: 5px;
+    }
+
+    #videos figure {
+      display: flex;
+      padding: 1em;
+      flex-direction: column;
+      align-items: center;
+      border: 2px solid #ff00ff;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 
 <body>
-  <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
-    poster="https://d1qwx91jjpd4x0.cloudfront.net/assets/208345b2-c994-4d48-8adf-a97d47aba5d2/Thumbnails/5minute.0000003.jpg"
-    data-setup="{}">
-    <source src="https://d1qwx91jjpd4x0.cloudfront.net/assets/208345b2-c994-4d48-8adf-a97d47aba5d2/MP4/5minute.mp4"
-      type="video/mp4" />
-    <source src="https://d1qwx91jjpd4x0.cloudfront.net/assets/208345b2-c994-4d48-8adf-a97d47aba5d2/MP4/5minute.hls"
-      type="video/hls" />
-    <p class="vjs-no-js">
-      To view this video please enable JavaScript, and consider upgrading to a
-      web browser that
-      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-    </p>
-  </video>
-  <video id="my-video" class="video-js" controls preload="auto" width="640" height="264"
-    poster="https://d1qwx91jjpd4x0.cloudfront.net/assets/208345b2-c994-4d48-8adf-a97d47aba5d2/Thumbnails/5minute.0000000.jpg"
-    data-setup="{}">
-    <source src="https://d1qwx91jjpd4x0.cloudfront.net/assets/208345b2-c994-4d48-8adf-a97d47aba5d2/MP4/5minute.mp4"
-      type="video/mp4" />
-    <source src="https://d1qwx91jjpd4x0.cloudfront.net/assets/208345b2-c994-4d48-8adf-a97d47aba5d2/MP4/5minute.hls"
-      type="video/hls" />
-    <p class="vjs-no-js">
-      To view this video please enable JavaScript, and consider upgrading to a
-      web browser that
-      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-    </p>
-  </video>
+  <div id="videos">
+    <figure>
+      <video id="my-video" class="video-js" controls preload="auto" width="640"
+        poster="https://d1qwx91jjpd4x0.cloudfront.net/assets/208345b2-c994-4d48-8adf-a97d47aba5d2/Thumbnails/5minute.0000003.jpg"
+        data-setup="{}">
+        <source src="https://d1qwx91jjpd4x0.cloudfront.net/assets/208345b2-c994-4d48-8adf-a97d47aba5d2/MP4/5minute.mp4"
+          type="video/mp4" />
+        <source src="https://d1qwx91jjpd4x0.cloudfront.net/assets/208345b2-c994-4d48-8adf-a97d47aba5d2/MP4/5minute.hls"
+          type="video/hls" />
+        <p class="vjs-no-js">
+          To view this video please enable JavaScript, and consider upgrading to a
+          web browser that
+          <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+        </p>
+      </video>
+      <figcaption>Demo Video One</figcaption>
+    </figure>
+    <figure>
+      <video id="my-video" class="video-js" controls preload="auto" width="640"
+        poster="https://d1qwx91jjpd4x0.cloudfront.net/assets/208345b2-c994-4d48-8adf-a97d47aba5d2/Thumbnails/5minute.0000000.jpg"
+        data-setup="{}">
+        <source src="https://d1qwx91jjpd4x0.cloudfront.net/assets/208345b2-c994-4d48-8adf-a97d47aba5d2/MP4/5minute.mp4"
+          type="video/mp4" />
+        <source src="https://d1qwx91jjpd4x0.cloudfront.net/assets/208345b2-c994-4d48-8adf-a97d47aba5d2/MP4/5minute.hls"
+          type="video/hls" />
+        <p class="vjs-no-js">
+          To view this video please enable JavaScript, and consider upgrading to a
+          web browser that
+          <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+        </p>
+      </video>
+      <figcaption>Demo Video Two</figcaption>
+    </figure>
+    <figure>
+      <video id="my-video" class="video-js" controls preload="auto" width="640"
+        poster="https://d1qwx91jjpd4x0.cloudfront.net/assets/208345b2-c994-4d48-8adf-a97d47aba5d2/Thumbnails/5minute.0000020.jpg"
+        data-setup="{}">
+        <source src="https://d1qwx91jjpd4x0.cloudfront.net/assets/208345b2-c994-4d48-8adf-a97d47aba5d2/MP4/5minute.mp4"
+          type="video/mp4" />
+        <source src="https://d1qwx91jjpd4x0.cloudfront.net/assets/208345b2-c994-4d48-8adf-a97d47aba5d2/MP4/5minute.hls"
+          type="video/hls" />
+        <p class="vjs-no-js">
+          To view this video please enable JavaScript, and consider upgrading to a
+          web browser that
+          <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+        </p>
+      </video>
+      <figcaption>Demo Video Three</figcaption>
+    </figure>
+  </div>
 
   <script src="https://vjs.zencdn.net/8.23.3/video.min.js"></script>
 </body>

@@ -1,0 +1,38 @@
+{
+  "Records": [
+      {
+          "eventVersion": "2.0",
+          "eventTime": "2017-08-08T00:19:56.995Z",
+          "requestParameters": {
+              "sourceIPAddress": "52.219.98.82"
+          },
+          "s3": {
+              "configurationId": "97b028b8-a97d-441f-a4b0-cacc42e9d377",
+              "object": {
+                  "eTag": "426a6fddeba4f338c07dd59b0768fcb3",
+                  "key": "10second2.mp4",
+                  "sequencer": "005989030743D59111",
+                  "size": 58000
+              },
+              "bucket": {
+                  "ownerIdentity": {
+                      "principalId": ""
+                  },
+                  "name": "ellipticavideos",
+                  "arn": "arn:aws:s3:::ellipticavideos"
+              },
+              "s3SchemaVersion": "1.0"
+          },
+          "responseElements": {
+              "x-amz-id-2": "K5eJLBzGn/9NDdPu6u3c9NcwGKNklZyY5ArO9QmGa/t6VH2HfUHHhPuwz2zH1Lz4",
+              "x-amz-request-id": "E68D073BC46031E2"
+          },
+          "awsRegion": "us-east-2",
+          "eventName": "ObjectCreated:CompleteMultipartUpload",
+          "userIdentity": {
+              "principalId": ""
+          },
+          "eventSource": "aws:s3"
+      }
+  ]
+}

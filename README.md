@@ -99,3 +99,13 @@ get bucket location:
 #### Cloudfront
 
 Find under the Origin>access control section of the cloudfront distro config
+
+### MediaConvert
+via cli [reference](https://awscli.amazonaws.com/v2/documentation/api/2.0.34/reference/mediaconvert/create-job-template.html#examples)
+```
+aws --profile elliptica mediaconvert create-job-template \
+    --endpoint-url https://mediaconvert.us-east-2.amazonaws.com \
+    --region us-east-2 \
+    --name EllipticaStreams1 \
+    --cli-input-json job.json
+    ```

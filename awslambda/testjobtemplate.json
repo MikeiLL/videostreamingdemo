@@ -1,0 +1,65 @@
+{
+  "AccelerationSettings": {
+      "Mode": "DISABLED"
+  },
+  "HopDestinations": [],
+  "Name": "TEST",
+  "Priority": 0,
+  "Settings": {
+      "Inputs": [
+          {
+              "AudioSelectors": {
+                  "Audio Selector 1": {
+                      "DefaultSelection": "DEFAULT"
+                  }
+              },
+              "TimecodeSource": "ZEROBASED",
+              "VideoSelector": {}
+          }
+      ],
+      "OutputGroups": [
+          {
+              "CustomName": "TESTTEMPLATE",
+              "Name": "File Group",
+              "OutputGroupSettings": {
+                  "FileGroupSettings": {},
+                  "Type": "FILE_GROUP_SETTINGS"
+              },
+              "Outputs": [
+                  {
+                      "AudioDescriptions": [
+                          {
+                              "CodecSettings": {
+                                  "AacSettings": {
+                                      "Bitrate": 96000,
+                                      "CodingMode": "CODING_MODE_2_0",
+                                      "SampleRate": 48000
+                                  },
+                                  "Codec": "AAC"
+                              }
+                          }
+                      ],
+                      "ContainerSettings": {
+                          "Container": "MP4",
+                          "Mp4Settings": {}
+                      },
+                      "VideoDescription": {
+                          "CodecSettings": {
+                              "Codec": "H_264",
+                              "H264Settings": {
+                                  "MaxBitrate": 6000000,
+                                  "RateControlMode": "QVBR",
+                                  "SceneChangeDetect": "TRANSITION_DETECTION"
+                              }
+                          }
+                      }
+                  }
+              ]
+          }
+      ],
+      "TimecodeConfig": {
+          "Source": "ZEROBASED"
+      }
+  },
+  "StatusUpdateInterval": "SECONDS_60"
+}
